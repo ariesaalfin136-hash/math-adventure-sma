@@ -1,0 +1,107 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(270deg, #0ea5e9, #6366f1, #a855f7);
+  background-size: 600% 600%;
+  animation: gradientBG 12s ease infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.card {
+  background: rgba(255,255,255,0.95);
+  width: 100%;
+  max-width: 520px;
+  border-radius: 22px;
+  padding: 28px;
+  box-shadow: 0 25px 40px rgba(0,0,0,0.3);
+  animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+h1 {
+  text-align: center;
+  color: #4338ca;
+  margin-bottom: 20px;
+  animation: bounce 1s;
+}
+
+@keyframes bounce {
+  0% { transform: scale(0.8); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.question {
+  font-size: 1.2rem;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #111827;
+}
+
+.answers button {
+  width: 100%;
+  margin-bottom: 12px;
+  padding: 14px;
+  font-size: 1rem;
+  border-radius: 14px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(135deg, #e0e7ff, #c7d2fe);
+  transition: 0.25s;
+}
+
+.answers button:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 10px 20px rgba(79,70,229,0.4);
+  background: linear-gradient(135deg, #c7d2fe, #a5b4fc);
+}
+
+.answers button:active {
+  transform: scale(0.95);
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  font-weight: bold;
+  color: #1e3a8a;
+}
+
+.next {
+  margin-top: 20px;
+  width: 100%;
+  padding: 14px;
+  font-size: 1rem;
+  border-radius: 14px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  color: white;
+  display: none;
+  animation: slideUp 0.6s ease;
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.next:hover {
+  box-shadow: 0 12px 25px rgba(22,163,74,0.5);
+}
